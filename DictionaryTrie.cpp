@@ -273,7 +273,12 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
      { 
              if(a.freq==b.freq)
              {
-                 return a.word < b.word;
+                 int comparing= a.word.compare(b.word);
+                 if(comparing<0)
+                 {
+                     return true;
+                 }
+                 return false;
 
              }
              return a.freq > b.freq;
@@ -319,4 +324,6 @@ DictionaryTrie::~DictionaryTrie() {
 
 
 }
+
+
 

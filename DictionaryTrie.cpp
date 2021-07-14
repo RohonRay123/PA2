@@ -135,10 +135,7 @@ bool DictionaryTrie::find(string word) const {
                  
                     return true;
                 }
-                else 
-                {
-                    return false;
-                }
+                
             }
             curr=curr->middle;
         }
@@ -200,8 +197,8 @@ void DictionaryTrie::recursions(string prefix,  DictionaryTrieNode* curr)
 {
     if(curr -> isWord == true)
     {
-      prefix=prefix+curr->character;
-        wordsVector.push_back(prefix);
+        //prefix=prefix+curr->character;
+        wordsVector.push_back(prefix+curr->character);
         frequencyVector.push_back(curr->wordFrequency);
     }
     if(curr->left != NULL)
@@ -214,8 +211,8 @@ void DictionaryTrie::recursions(string prefix,  DictionaryTrieNode* curr)
     }
     if(curr-> middle != NULL)
     {
-        prefix=prefix+curr->character;
-        recursions(prefix,curr->middle);
+        //prefix=prefix+curr->character;
+        recursions(prefix+curr->character,curr->middle);
     }
     //vector<string> record;
        

@@ -6,6 +6,7 @@
 #include "DictionaryTrie.hpp"
 #include <iostream>
 #include<algorithm>
+#include "DictionaryTrieNode.hpp"
 
 /* TODO */
 DictionaryTrie::DictionaryTrie() {
@@ -65,10 +66,9 @@ bool DictionaryTrie::insert(string word, unsigned int freq)
                  counting=counting+1;
                  if(counting == word.length())
                  {
-                    // cout<< "The counting is: " << counting << endl;
+                    
                      curr->isWord=true;
                      curr->wordFrequency=freq;
-                    // cout<< " This is supposed to return true??" << endl;
                      return true;
                  }
                  if(curr->middle == NULL)
@@ -294,7 +294,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
     {
         wordsSortedLimit.push_back(wordsVectorSorted.at(g));
     }
-    wordsVector.clear();
+     wordsVector.clear();
      return wordsSortedLimit;
 }
 
@@ -322,3 +322,4 @@ DictionaryTrie::~DictionaryTrie() {
 
 
 }
+

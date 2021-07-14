@@ -42,4 +42,3 @@ class DictionaryTrieNode {
 };
 
 #endif  // DICTIONARY_TRIE_NODE_HPP
-

@@ -9,6 +9,7 @@
 #include <utility>
 #include <vector>
 #include <unordered_map> 
+#include "DictionaryTrieNode.hpp"
 
 
 using namespace std;
@@ -18,39 +19,7 @@ using namespace std;
  * a mulit-way trie or a ternary search tree.
  */
 
-/**
- * DictionaryTrieNode.hpp
- *
- * Author: Rohon Ray
- */
-/**
- * The class for a dictionary ADT, implemented as either
- * a mulit-way trie or a ternary search tree.
- */
 
-class DictionaryTrieNode {
-  public: 
-     int wordFrequency;
-     bool isWord;
-     char character;
-     DictionaryTrieNode* left;
-     DictionaryTrieNode* right; 
-     DictionaryTrieNode* middle; 
-     
-   DictionaryTrieNode(char character, DictionaryTrieNode* left,
-   DictionaryTrieNode* right,DictionaryTrieNode* middle,
-   int wordFrequency,bool isWord)
-   {
-       this->left=left;
-       this->right=right;
-       this->middle=middle; 
-       this->wordFrequency=wordFrequency;
-       this->isWord=isWord;
-       this->character=character;
-       
-   }
-
-};
 
 
 class DictionaryTrie {

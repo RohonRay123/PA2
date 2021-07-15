@@ -176,8 +176,12 @@ DictionaryTrieNode* DictionaryTrie::search(string prefix)
                 {
                     return curr->middle;
                 }
-               
-                return curr;
+                if(curr->isWord==true)
+                {
+                 wordsVector.push_back(prefix);
+                 frequencyVector.push_back(curr->wordFrequency);
+                 return NULL;
+                }
             }
             curr=curr->middle;
         }
@@ -249,7 +253,9 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
      DictionaryTrieNode* placeholder=search(prefix);
      if(placeholder==NULL)
      {
-         return {};
+         vector<string> y=wordsVector;
+         wordsVector.clear();
+         return y;
      }
      recursions(prefix,placeholder);
      vector<string> wordsVectorSorted;
@@ -324,6 +330,3 @@ DictionaryTrie::~DictionaryTrie() {
 
 
 }
-
-
-

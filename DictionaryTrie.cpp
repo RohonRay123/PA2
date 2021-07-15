@@ -1,4 +1,4 @@
-/**
+**
  * TODO: DictionaryTrie.cpp
  *
  * Author:Rohon Ray
@@ -303,6 +303,8 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         wordsSortedLimit.push_back(wordsVectorSorted.at(g));
     }
      wordsVector.clear();
+     wordsVectorSorted.clear();
+     frequencyVector.clear();
      return wordsSortedLimit;
 }
 
@@ -330,3 +332,4 @@ DictionaryTrie::~DictionaryTrie() {
 
 
 }
+

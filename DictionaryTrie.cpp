@@ -307,7 +307,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
      frequencyVector.clear();
      return wordsSortedLimit;
 }
-jk
+
 /* TODO */
 void DictionaryTrie::DeleteAll(DictionaryTrieNode* p)
 {

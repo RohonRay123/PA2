@@ -255,6 +255,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
      {
          vector<string> y=wordsVector;
          wordsVector.clear();
+         frequencyVector.clear();
          return y;
      }
      recursions(prefix,placeholder);

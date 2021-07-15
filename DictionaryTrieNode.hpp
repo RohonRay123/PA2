@@ -18,13 +18,14 @@ using namespace std;
  */
 
 class DictionaryTrieNode {
-  public: 
+  private:
      int wordFrequency;
      bool isWord;
      char character;
      DictionaryTrieNode* left;
      DictionaryTrieNode* right; 
-     DictionaryTrieNode* middle; 
+     DictionaryTrieNode* middle;
+  public:  
      
    DictionaryTrieNode(char character, DictionaryTrieNode* left,
    DictionaryTrieNode* right,DictionaryTrieNode* middle,

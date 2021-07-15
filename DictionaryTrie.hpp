@@ -24,8 +24,7 @@ using namespace std;
 
 class DictionaryTrie {
   private:
-    // TODO: add private members and helper methods here
-     //unordered_map<char, DictionaryTrieNode*> mapping;
+    
      DictionaryTrieNode* root;
       vector<char> wording;
      vector<DictionaryTrieNode*> NodeMap; 
@@ -43,21 +42,20 @@ class DictionaryTrie {
     
 
       public:
-    /* TODO: add function header */
-    
-    DictionaryTrie();
+    /* Initialize the DictionaryTrie */
+     DictionaryTrie();
    
-    /* TODO: add function header */
+    /* insert words to TST and returns true or false when inserted */
     bool insert(string word, unsigned int freq);
 
-    /* TODO: add function header */
+    /* Finds if a word is in TST and returns true or false */
     bool find(string word) const;
 
-    /* TODO: add function header */
+    /* returns list of words with that specific prefix */
     vector<string> predictCompletions(string prefix,
                                       unsigned int numCompletions);
 
-    /* TODO: add function header */
+    /* deletes all objects defined by new  */
     ~DictionaryTrie();
 
     

@@ -1,5 +1,5 @@
 /**
- * TODO: DictionaryTrie.cpp
+ *  DictionaryTrie.cpp
  *
  * Author:Rohon Ray
  */
@@ -8,14 +8,14 @@
 #include<algorithm>
 #include "DictionaryTrieNode.hpp"
 
-/* TODO */
+
 DictionaryTrie::DictionaryTrie() {
   root=NULL;
 }
 
 
 
-/* TODO */
+
 bool DictionaryTrie::insert(string word, unsigned int freq) 
 { 
 
@@ -111,7 +111,7 @@ bool DictionaryTrie::insert(string word, unsigned int freq)
     
     return false; }
 
-/* TODO */
+
 bool DictionaryTrie::find(string word) const { 
     
     if(word=="")
@@ -153,7 +153,7 @@ bool DictionaryTrie::find(string word) const {
     
     return false; }
 
-/* TODO */
+
 
 DictionaryTrieNode* DictionaryTrie::search(string prefix)
 {
@@ -223,10 +223,7 @@ void DictionaryTrie::recursions(string prefix,  DictionaryTrieNode* curr)
         //prefix=prefix+curr->character;
         recursions(prefix+curr->character,curr->middle);
     }
-    //vector<string> record;
-       
-
-    //return record;
+    
 }
 
 int DictionaryTrie::findIndex(vector<int> vectors, int a)
@@ -315,7 +312,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
      return wordsSortedLimit;
 }
 
-/* TODO */
+
 void DictionaryTrie::DeleteAll(DictionaryTrieNode* p)
 {
     if(p!=0)

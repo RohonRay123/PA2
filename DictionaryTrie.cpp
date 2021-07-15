@@ -1,4 +1,4 @@
-**
+/**
  * TODO: DictionaryTrie.cpp
  *
  * Author:Rohon Ray

@@ -280,7 +280,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
              if(a.freq==b.freq)
              {
                  int comparing= a.word.compare(b.word);
-                 if(comparing<0)
+                 if(comparing<=0)
                  {
                      return true;
                  }
